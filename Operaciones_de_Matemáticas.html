@@ -1,7 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EJERCICIOS BASICOS DE OPERACIONES MATEMATICAS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        select, button, input {
+            padding: 8px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #question, #feedback {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #feedback {
+            color: #d9534f;
+        }
+    </style>
 </head>
 <body>
     <h1>Programa de Instrucción Asistida</h1>
@@ -40,8 +86,8 @@
                 num1 = Math.floor(Math.random() * 50) + 1;
                 num2 = Math.floor(Math.random() * 50) + 1;
             } else {
-                num1 = Math.floor(Math.random() * 100) + 1;
-                num2 = Math.floor(Math.random() * 100) + 1;
+                num1 = Math.floor(Math.random() * 120) + 1;
+                num2 = Math.floor(Math.random() * 120) + 1;
             }
             if (operation === "addition") {
                 question = "¿Cuánto es " + num1 + " + " + num2 + "?";
@@ -60,6 +106,7 @@
             document.getElementById('feedback').innerHTML = "";
             document.getElementById('userAnswer').value = "";
         }
+
         function checkAnswer() {
             var userAnswer = parseFloat(document.getElementById('userAnswer').value);
             var difficulty = document.getElementById('difficulty').value;
